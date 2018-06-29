@@ -1,0 +1,51 @@
+api keys....must be used....don't push to GitHub.
+
+use .ignorefiles so you don't have to push API keys to internet
+
+in a config file
+
+
+implement smoething in local storage
+
+project should pull api keys out of local storage....config storage
+
+all 5 users need local storage, sharing firebase key or other API keys
+
+put instructions for user in READme
+
+
+first week.... build out MVP. minimally viable product.
+will discuss further on Tuesday.
+
+Everyone on team has to do some part of presentation.
+
+should use slides for presentation. about 10 minutes. need someone to demo.
+
+our domain is going to be GitHub.i o 
+CORS **** is very important.
+
+Headers can be added to ajax call, to enable communication with API. CORS (cross origin.....)
+
+work on feature branches. initiate pull req. goes thru code review. then push to master branch.
+
+will use GitHub issues. can track bugs. 
+write issues for each of your features.
+
+master branch is only the code we want in production. 
+don't keep checking stuff into the master branch if its not tested or whole. 
+
+WE are FOLLOWING GITHUB FLOW, (not git flow!!!!)
+this is paradigm we will follow.
+
+everytime we are working on new feature, make a new branch.
+
+git checkout of SOME NEW BRANCH NAME to create a new branch.
+code locally on branch. can push the branches up to git hub.
+
+When you think code is ready...initiate PULL request.
+Then code review will start. Group might have changes they request to make.
+Once it passes review, you can merge into master....until that time the CODE is not live and NOT in production.
+
+Research GITHUB FLOW to find info
+
+git push origin BRanch name
