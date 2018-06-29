@@ -14,7 +14,12 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
             <!-- CSS -->
+            
             <link rel="stylesheet" href="assets/css/style.css">
+<!--firebase scrips-->
+<script src="https://www.gstatic.com/firebasejs/5.1.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.0.0/firebase-database.js"></script>-->
+
 
   </head>
 
@@ -96,9 +101,9 @@
               <div class="card-body">
                 <form>
                   <div class="form-group">
-                    <textarea class="form-control" rows="3"></textarea>
+                    <textarea id="blogtext" class="form-control" rows="3"></textarea>
                   </div>
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" id="blogbutton" class="btn btn-primary">Submit</button>
                 </form>
               </div>
             </div>
@@ -218,6 +223,9 @@
             <script src="Assets/vendor/jquery/jquery.min.js"></script>
             <script src="Assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
+
+  <script src="Assets/js/firebaseappinit.js"></script>
+  <script src="Assets/js/blogfirebaseapp.js"></script>
   </body>
 
 </html>
