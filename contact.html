@@ -10,11 +10,19 @@
     <link rel="shortcut icon" type="img/png" href="Assets/images/coinhead.png">
     <title>| Coin Compare Contact</title>
 
+    <!--jquery, has to be placed b4 bootstrap-->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+
       <!-- Google Fonts-->
       <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
            <!-- CSS -->
            <link rel="stylesheet" href="assets/css/style.css">
+
+    <!--firebase scrips-->
+    <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.0/firebase-database.js"></script>-->
 
 
   </head>
@@ -145,8 +153,15 @@
 
     <!-- Contact form JavaScript -->
     <!-- Do not edit these files! In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
-    <script src="Assets/js/jqBootstrapValidation.js"></script>
-    <script src="Assets/js/contact_me.js"></script>
+    <!--script src="Assets/js/jqBootstrapValidation.js"></script>
+    <script src="Assets/js/contact_me.js"></script>-->
+
+        <!--firebase scrips-->
+        <!--script src="https://www.gstatic.com/firebasejs/5.1.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.0.0/firebase-database.js"></script>
+    <!--connects to firebase-->
+    <script src="Assets/js/firebaseappinit.js"></script>
+    <script src="Assets/js/contactfirebaseapp.js"></script>
 
   </body>
 
