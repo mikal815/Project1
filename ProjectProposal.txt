@@ -1,0 +1,37 @@
+Project Title 
+
+Team Members
+
+    Michael Mensinger
+    Peter Lim
+    Danielle LaMorte
+    Zach Weist
+
+Project Description
+    Compare 2 different Bitcoin exchanges to see who has the best rates.
+    CBOE and CME Groups are Bitcoin exchanges with their own APIs.
+    We will pull data from these 2 APIs to allow users to compare their rates.
+    
+    User can request data for current price, 1 month, 2 months, and volume.
+
+    User can look at volume of sales. 
+    
+    Ratio is one to 5...CBOE to CME
+    
+
+WHy this data is important and useful:
+        This project focuses on trading futures markets.
+        Futures offer a fast, cost-effective way to trade financial and commodity markets. 
+
+        They are standardized contracts to buy or sell a particular asset at a set price,
+        on a set date in the future, 
+        in predefined quantity and quality. Traders worldwide use futures to easily 
+        reduce risk or seek profits on changing markets.
+
+
+Sketch of Final Product
+
+APIs to be Used
+    The CBOE and CME Groups APIs
+
+Rough Breakdown of Tasks 
