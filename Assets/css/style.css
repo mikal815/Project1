@@ -86,6 +86,12 @@ body {
   color: #212529;
   text-align: left;
   background-color: #085936;
+  background: url(../images/movingstocks.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+   /*overlay css here (#E6DD24)*/
 }
 
 [tabindex="-1"]:focus {
