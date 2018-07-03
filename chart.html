@@ -1,60 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Coin Compare">
-    <meta name="author" content="Coin Compare">
-    <link rel="shortcut icon" type="img/png" href="Assets/images/coinhead.png">
-    <title>| Coin Compare Coins Comparison</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Coin Compare">
+  <meta name="author" content="Coin Compare">
+  <link rel="shortcut icon" type="img/png" href="Assets/images/coinhead.png">
+  <title>| Coin Compare Coins Comparison</title>
 
-      <!-- Google Fonts-->
-      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <!-- Google Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
-              <!-- CSS -->
-              <link rel="stylesheet" href="assets/css/style.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
 
-  </head>
+</head>
 
-  <body>
+<body>
 
-    <!-- Navigation -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="home.html"><img src="Assets/images/coincompare.png" width="35px" height="35px">Coin Compare</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-              <a class="nav-link" href="home.html">Home</a>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-              <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                  <a class="nav-link" href="exchange.html">Exchanges</a>
-                </li>
-                <li class="nav-item active">
+  <!-- Navigation -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="home.html">
+        <img src="Assets/images/coincompare.png" width="35px" height="35px">Coin Compare</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <a class="nav-link" href="home.html">Home</a>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="exchange.html">Exchanges</a>
+              </li>
+              <li class="nav-item active">
                 <a class="nav-link" href="coins.html">Coins</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="chart.html">Chart</a>
               </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-            <li class="nav-item">
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link" href="blog.html">Blog</a>
               </li>
-          </ul>
-        </div>
+            </ul>
+          </div>
       </div>
-    </nav>
+  </nav>
+  <style>
+    #myChart {
+      background-color: white;
+    }
 
+    #myChart2 {
+      margin-top: 20px;
+      background-color: white;
+    }
+  </style>
+  <div class="container">
+    <canvas id="myChart"></canvas>
+    <canvas id="myChart2"></canvas>
+  </div>
+
+
+
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
     <div class="container">
-        <canvas id="myChart"></canvas>
+      <p class="m-0 text-center text-white">Copyright &copy; Coin Compare 2018</p>
     </div>
+ 
+       <!-- /.container -->
     
     <!-- Footer -->
     <footer class="py-5 bg-dark">
