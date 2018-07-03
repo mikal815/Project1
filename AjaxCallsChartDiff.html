@@ -1,185 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Crypto Differrentials</title>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script> 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
     <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.0.0/firebase-database.js"></script>
     <!--moment js-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script> 
-     
-</head>
-<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
 
+</head>
+
+<body>
+    <div class="conatiner">
         <form>
-                <div class="form-row align-items-center">
-                  <div class="col-auto my-1">
+            <div class="form-row align-items-center">
+                <div class="col-auto my-1">
                     <label class="mr-sm-2" for="inlineFormCustomSelect">Current Best Prices</label>
-                    <p>Find the diffential of the cryptocurrency of your choice. This compares data from coinmarketcap.com and coinranking.com</p>
+                    <p>Find the diffential of the cryptocurrency of your choice. This compares data from coinmarketcap.com and
+                        coinranking.com</p>
                     <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                      <option selected>Choose...</option>
-                      <option id="btc" value="1">BTC</option>
-                      <option id="eth" value="2">ETH</option>
-                      <option id="ltc" value="3">LTC</option>
+                        <option selected>Choose...</option>
+                        <option id="btc" value="1">BTC</option>
+                        <option id="eth" value="2">ETH</option>
+                        <option id="ltc" value="3">LTC</option>
                     </select>
-                  </div>
-                  <div class="col-auto my-1">
-                    <div class="custom-control custom-checkbox mr-sm-2">
-                      <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
-                      <label class="custom-control-label" for="customControlAutosizing">Remember my preference</label>
-                    </div>
-                  </div>
-                  <div class="col-auto my-1">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                  </div>
                 </div>
-              </form>
-    
+                <div class="col-auto my-1">
+                    <div class="custom-control custom-checkbox mr-sm-2">
+                        <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
+                        <label class="custom-control-label" for="customControlAutosizing">Remember my preference</label>
+                    </div>
+                </div>
+                <div class="col-auto my-1">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </form>
+        <table class="table table-striped" id="valuesFrom2APIs">
+            <thead>
+                <tr>
+                <h3>Crytocurrency Values from 2 Different Markets</h3>
+                </tr>
+            </thead>
+            <thead>
+                <tr>
+                    <th scope="col" id="currencyName">Currency Name</th>
+                    <th scope="col" id="latestTime">Time of latest price retrieved</th>
+                    <th scope="col" id="change24">Market</th>
+                    <th scope="col" id="change7">Price</th>
+                    <th scope="col" id="change30">Difference</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Bitcoin</td>
+                </tr>
+                <tr>
+                    <td>Etherium</td>
+                </tr>
+                <tr>
+                    <td>Litecoin</td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-striped" id="crypo-values">
+            <thead>
+                <tr></tr>
+                <h3>Percent Change in Crytocurrency Values</h3>
+                </tr>
+            </thead>
+            <thead>
+                <tr>
+                    <th scope="col" id="currencyName">Currency Name</th>
+                    <th scope="col" id="latestTime">Time of latest price retrieved</th>
+                    <th scope="col" id="change24">Percent Changed in 24 hour period</th>
+                    <th scope="col" id="change7">Change in 7 Days</th>
+                    <th scope="col" id="change30">change in 1 Month</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Bitcoin</td>
+                </tr>
+                <tr>
+                    <td>Etherium</td>
+                </tr>
+                <tr>
+                    <td>Litecoin</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-<script>
-    //function bitcoin() {
-  
-      // Querying the our 1st api coinmarketcap
-     var queryURL = "https://api.coinmarketcap.com/v2/ticker/?limit=10&sort=rank";
-      $.ajax({
-        url: queryURL,
-        method: "GET"
-      }).then(function(response) {
-  
-        // Printing the entire object to console
-        console.log(response.data, 'RESPONSE.DATA.');
-        //printing our info console
-        console.log(JSON.stringify(response.data["1"]["name"], null, 2), 'RESPONSE');
-        console.log(JSON.stringify(response.data["1"]["quotes"]["USD"]["price"], null, 2), 'RESPONSE');
-        console.log(JSON.stringify(response.data["1027"]["name"], null, 2), 'RESPONSE');
-        console.log(JSON.stringify(response.data["1027"]["quotes"]["USD"]["price"], null, 2), 'RESPONSE');
-        console.log(JSON.stringify(response.data["2"]["name"], null, 2), 'RESPONSE');
-        console.log(JSON.stringify(response.data["2"]["quotes"]["USD"]["price"], null, 2), 'RESPONSE');
-        console.log(response.data["1"]["name"],'RESPONSE');
-
-        
-        //bitoin();
-        console.log(response.data["1"]["name"]);
-
-        /*var assetClass=$("<h1>").text(response.data.coins.index[0].name);
-       // console.log(assetClass);
-//storing an array of results in the results variable
-        //var results =$("<h1>").text(response.data;
-
-        //looping over every result item
-        for (var i = 0; i < results.length; i++) {
-
-        //only taking action if the photo has an appropriate rating
-        if (results[i].rating !== "r" && results[i].rating !== "pg-13") {
-
-            //creating a div with the class "item"
-            var gifDiv = $("<div class='item'>");
-
-            //storing the results item's rating
-            var rating = results[i].rating;
-
-            //creating a paragraph tag w/the result item's rating
-            var p = $("<p>").text("Rating: " + rating);
-
-            //creating an image tag
-            var personImage = $("<img>");
-
-            //giivng the image tag an src attribute of a property
-            //pulled of the result item
-            personImage.attr("src", results[i].images.fixed_height.url);
-
-        }
-        } */
-      });   
-
-      $.ajax({
-      //url: queryURL,
-      url: "https://api.coinranking.com/v1/public/coins?sort=price&limit=20",
-      method: "GET"
-      }).then(function(response) {
-  
-        // Printing the entire object to console
-        console.log(response);
-        console.log(response.data.coins["0"]["symbol"]);
-        console.log(response.data.coins["0"]["price"]);
-        console.log(response.data.coins["1"]["symbol"]);
-        console.log(response.data.coins["1"]["price"]);
-        console.log(response.data.coins["5"]["symbol"]);
-        console.log(response.data.coins["5"]["price"]);
-        
-        //bitoin();
-      });
-
-      //getting times for 3 currencies from CoinRanking.com
-
-      $.ajax({
-      //url: queryURL,
-      url: "https://api.coinranking.com/v1/public/coin/1335/history/24h?base=USD",
-      method: "GET"
-      }).then(function(response) {
-        console.log(response.data, 'RESPONSE.DATA.');
-          console.log(response);
-       //   console.log(data.history.timestamp);
-       //   console.log(data.history.price);
-          console.log(data.history.change);
-
-       
-        console.log(data.history[291]);
-
-      //bitcoin time stamp for coinranking.com and the percent change during last 24hr.
-      // Bitcoin id= 1335
-      });
-
-      $.ajax({
-      //url: queryURL,
-      url: "https://api.coinranking.com/v1/public/coin/1211/history/24h?base=USD",
-      method: "GET"
-      }).then(function(response) {
-        console.log(response.data, 'RESPONSE.DATA.');
-          console.log(response)
-       //   console.log(data.history.timestamp);
-       //   console.log(data.history.price);
-          console.log(data.history.change);
-
-        
-        console.log(data.history[291]);
-         
-
-      //Etherium time stamp for coinranking.com and the percent change during last 24hr.
-      //Etherium id= "1211"
-      });
-
-      $.ajax({
-      //url: queryURL,
-      url: "https://api.coinranking.com/v1/public/coin/527/history/24h?base=USD",
-      method: "GET"
-      }).then(function(response) {
-        console.log(response.data, 'RESPONSE.DATA.');
-          console.log(response);
-      //    console.log(data.history.timestamp);
-    //      console.log(data.history.price);
-          console.log(data.history.change);
-
-          
-          console.log(data.history[291]);
-
-      //Litecoin time stamp for coinranking.com and the percent change during last 24hr.
-      //Litecoin  id= "1211"
-      });
-
-
-
-
-     // Math.abs
-  
-</script>
+<script src="AjaxLogic.js"></script>
 
 </html>
