@@ -1,155 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Coin Compare">
-    <meta name="author" content="Coin Compare">
-    <link rel="shortcut icon" type="img/png" href="Assets/images/coinhead.png">
-    <title>| Coin Compare Blog</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Coin Compare">
+  <meta name="author" content="Coin Compare">
+  <link rel="shortcut icon" type="img/png" href="Assets/images/coinhead.png">
+  <title>| Coin Compare Blog</title>
 
-      <!-- Google Fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <!-- Google Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
-            <!-- CSS -->
-            
-            <link rel="stylesheet" href="assets/css/style.css">
-<!--firebase scrips-->
-<script src="https://www.gstatic.com/firebasejs/5.1.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/5.0.0/firebase-database.js"></script>-->
+  <!-- CSS -->
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!--firebase scrips-->
+  <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.0.0/firebase-database.js"></script>-->
 
 
-  </head>
+</head>
 
-  <body>
+<body>
 
-    <!-- Navigation -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="home.html"><img src="Assets/images/coincompare.png" width="35px" height="35px">Coin Compare</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-              <a class="nav-link" href="home.html">Home</a>
-          </li>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-              <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                  <a class="nav-link" href="exchange.html">Exchanges</a>
-                </li>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                  <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                <a class="nav-link" href="coins.html">Coins</a>
-              </li>
-              <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="chart.html">Chart</a>
-              </li>
-              <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-              <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="blog.html">Blog</a>
-              </li>
-          </ul>
-        </ul>
-      </ul>
-    </ul>
-  </ul>
-</ul>
-        </div>
-      </div>
-    </nav>
-
-    <!-- Page Content -->
+  <!-- Navigation -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
+      <a class="navbar-brand" href="home.html">
+        <img src="Assets/images/coincompare.png" width="35px" height="35px">Coin Compare</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <a class="nav-link" href="home.html">Home</a>
+          </li>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="exchange.html">Coin Change</a>
+              </li>
+              <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="coins.html">Coins</a>
+                  </li>
+                  <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                      <li class="nav-item">
+                        <a class="nav-link" href="chart.html">Chart</a>
+                      </li>
+                      <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav ml-auto">
+                          <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                          </li>
+                          <div class="collapse navbar-collapse" id="navbarResponsive">
+                            <ul class="navbar-nav ml-auto">
+                              <li class="nav-item active">
+                                <a class="nav-link" href="blog.html">Blog</a>
+                              </li>
+                            </ul>
+                        </ul>
+                    </ul>
+                </ul>
+            </ul>
+        </ul>
+        </div>
+        </div>
+  </nav>
 
-        <!-- Page Heading/Breadcrumbs -->
-        <h1 class="mt-4 mb-3"></h1>
-  
-        <div class="row">
-  
-          <!-- Post Content Column -->
-          <div class="col-lg-8">
-  
-            <!-- Preview Image -->
-            <img class="img-fluid rounded" src="Assets/images/blogimage.jpg" alt="">
-  
-            <hr>
-  
-            <!-- Date/Time -->
-            <p>Posted on January 1, 2017 at 12:00 PM</p>
-  
-            <hr>
-  
-            <!-- Post Content -->
-            <p class="lead">If anyone has any questions about Crypto currencies, YOU can look at the previous comments below from other users of Coin Compare to see if anyone has answered YOUR question. If YOUR question has not already been answered, then comment with your question and someone will get back to you shortly! IF YOU do not have the patience to look through all the comments in the blog, then navigate to the contact tab and a Coin Compare representative will reply to Your query with an email as soon as possible!</p>
-  
-            <hr>
-  
-            <!-- Comments Form -->
-            <div class="card my-4">
-              <h5 class="card-header">Leave a Comment:</h5>
-              <div class="card-body">
-                <form>
-                  <div class="form-group">
-                    <textarea id="blogtext" class="form-control" rows="3"></textarea>
-                  </div>
-                  <button type="submit" id="blogbutton" class="btn btn-primary">Submit</button>
-                </form>
+  <!-- Page Content -->
+  <div class="container">
+
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3"></h1>
+
+    <div class="row">
+
+      <!-- Post Content Column -->
+      <div class="col-lg-8">
+
+        <!-- Preview Image -->
+        <img class="img-fluid rounded" src="Assets/images/blogimage.jpg" alt="">
+
+        <hr>
+
+        <!-- Date/Time -->
+        <p>Posted on January 1, 2017 at 12:00 PM</p>
+
+        <hr>
+
+        <!-- Post Content -->
+        <p class="lead">If anyone has any questions about Crypto currencies, YOU can look at the previous comments below from other users
+          of Coin Compare to see if anyone has answered YOUR question. If YOUR question has not already been answered, then
+          comment with your question and someone will get back to you shortly! IF YOU do not have the patience to look through
+          all the comments in the blog, then navigate to the contact tab and a Coin Compare representative will reply to
+          Your query with an email as soon as possible!</p>
+
+        <hr>
+
+        <!-- Comments Form -->
+        <div class="card my-4">
+          <h5 class="card-header">Leave a Comment:</h5>
+          <div class="card-body">
+            <form>
+              <div class="form-group">
+                <textarea id="blogtext" class="form-control" rows="3"></textarea>
               </div>
-            </div>
-  
-            <!-- Single Comment -->
-            <div class="media mb-4">
-              <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
-              <div class="media-body">
-                <h5 class="mt-0">Lisa Chu</h5>
-                What Crypto currency does everyone think is the best investment?
-              </div>
-            </div>
-  
-            <!-- Comment with nested comments -->
-            <div class="media mb-4">
-              <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
-              <div class="media-body">
-                <h5 class="mt-0">Denzel Washington</h5> 
-                Thanks for all the help! Now I know what Crypto currency I want to invest in!
-                <div class="media mt-4">
-                  <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
-                  <div class="media-body">
-                    <h5 class="mt-0">Sarah Apple</h5>
-                   How much cash would everyone typically recommend to start investing in crypto currencies?
-                  </div>
-                </div>
-  
-                <div class="media mt-4">
-                  <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
-                  <div class="media-body">
-                    <h5 class="mt-0">Mike Smith</h5>
-                    How safe are Crypto currency investments?
-                  </div>
-                </div>
-  
-              </div>
-            </div>
-  
+              <button type="submit" id="blogbutton" class="btn btn-primary">Submit</button>
+            </form>
           </div>
-  
- 
-  
- 
-</div>
+        </div>
+
+        <!-- Single Comment -->
+        <div class="media mb-4">
+          <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+          <div class="media-body">
+            <h5 class="mt-0">Lisa Chu</h5>
+            What Crypto currency does everyone think is the best investment?
+          </div>
+        </div>
+
+        <!-- Comment with nested comments -->
+        <div class="media mb-4">
+          <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+          <div class="media-body">
+            <h5 class="mt-0">Denzel Washington</h5>
+            Thanks for all the help! Now I know what Crypto currency I want to invest in!
+            <div class="media mt-4">
+              <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+              <div class="media-body">
+                <h5 class="mt-0">Sarah Apple</h5>
+                How much cash would everyone typically recommend to start investing in crypto currencies?
+              </div>
+            </div>
+
+            <div class="media mt-4">
+              <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+              <div class="media-body">
+                <h5 class="mt-0">Mike Smith</h5>
+                How safe are Crypto currency investments?
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+
+
+
+    </div>
     <!-- Footer -->
     <footer class="py-5 bg-dark">
       <div class="container">
@@ -158,13 +164,13 @@
       <!-- /.container -->
     </footer>
 
-            <!-- Bootstrap core JavaScript -->
-            <script src="Assets/vendor/jquery/jquery.min.js"></script>
-            <script src="Assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="Assets/vendor/jquery/jquery.min.js"></script>
+    <script src="Assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 
-  <script src="Assets/js/firebaseappinit.js"></script>
-  <script src="Assets/js/blogfirebaseapp.js"></script>
-  </body>
+    <script src="Assets/js/firebaseappinit.js"></script>
+    <script src="Assets/js/blogfirebaseapp.js"></script>
+</body>
 
 </html>
