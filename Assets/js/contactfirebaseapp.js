@@ -40,10 +40,12 @@ console.log("errors", errors)
     alert(errors);
    
   $("#errormessage").append("string")
-     
+} else {
+  alert("Your Information has been received and Coin Compare will contact you shortly");
+}
 
 
-  }
+  
 
 
  
@@ -58,7 +60,7 @@ console.log("errors", errors)
   console.log(newCust.ema);
   console.log(newCust.nam);
 
-  alert("Your Information has been received and Coin Compare will contact you shortly");
+ // alert("Your Information has been received and Coin Compare will contact you shortly");
 
   // Clears all of the text-boxes
   $("#name").val("");
