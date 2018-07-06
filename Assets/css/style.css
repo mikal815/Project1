@@ -4328,11 +4328,11 @@ input[type="button"].btn-block {
 }
 
 .navbar-dark .navbar-brand {
-  color: #085936;
+  color: #fff;
 }
 
 .navbar-dark .navbar-brand:hover, .navbar-dark .navbar-brand:focus {
-  color: #085936;
+  color: #fff;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -4349,11 +4349,11 @@ input[type="button"].btn-block {
 }
 
 .navbar-dark .navbar-nav .nav-link {
-  color: #085936;
+  color: #fff;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
-  color: #085936;
+  color: #fff;
   -webkit-transition: all 200ms ease-in;
   -webkit-transform: scale(1.2);
   -ms-transition: all 200ms ease-in;
@@ -4374,7 +4374,7 @@ input[type="button"].btn-block {
 .navbar-dark .navbar-nav .active > .nav-link,
 .navbar-dark .navbar-nav .nav-link.show,
 .navbar-dark .navbar-nav .nav-link.active {
-  color: #085936;
+  color: #fff;
 }
 
 .navbar-dark .navbar-toggler {
@@ -4391,11 +4391,11 @@ input[type="button"].btn-block {
 }
 
 .navbar-dark .navbar-text a {
-  color: #085936;
+  color: #fff;
 }
 
 .navbar-dark .navbar-text a:hover, .navbar-dark .navbar-text a:focus {
-  color: #085936;
+  color: #fff;
 }
 
 .card {
@@ -6170,7 +6170,7 @@ button.bg-light:focus {
 }
 
 .bg-dark {
-  background-color: #fff!important;
+  background-color: rgba(0, 128, 0, 0.5)!important;
 }
 
 a.bg-dark:hover, a.bg-dark:focus,
@@ -8877,7 +8877,7 @@ button.bg-dark:focus {
 }
 
 .text-white {
-  color: #085936 !important;
+  color: #fff !important;
 }
 
 .text-primary {
