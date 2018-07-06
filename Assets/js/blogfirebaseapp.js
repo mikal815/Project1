@@ -1,4 +1,4 @@
-console.log('happy');
+console.log('test');
 //blogfirebase.app  //button for adding employees
 $("#blogbutton").on("click", function(event) {
   console.log("hey");
