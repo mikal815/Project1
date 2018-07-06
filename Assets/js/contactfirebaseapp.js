@@ -43,12 +43,15 @@ console.log("errors", errors)
 } else {
   alert("Your Information has been received and Coin Compare will contact you shortly");
 }
+<<<<<<< Updated upstream
 
 
   
 
 
  
+=======
+>>>>>>> Stashed changes
 
   //dont want any of this to run unless user has valid EMAIL
   //upload customer data to the database
@@ -60,7 +63,11 @@ console.log("errors", errors)
   console.log(newCust.ema);
   console.log(newCust.nam);
 
+<<<<<<< Updated upstream
  // alert("Your Information has been received and Coin Compare will contact you shortly");
+=======
+  //alert("Your Information has been received and Coin Compare will contact you shortly");
+>>>>>>> Stashed changes
 
   // Clears all of the text-boxes
   $("#name").val("");
