@@ -10,9 +10,11 @@
   <link rel="shortcut icon" type="img/png" href="Assets/images/coinhead.png">
   <title>| Coin Compare Exchanges Comparison</title>
   <!--JQuery-->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
   <!--AJAX-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
   <!-- SCSS -->
   <link rel="stylesheet" href="Assets/scss/css.scss">
   <!-- Google Fonts-->
@@ -24,6 +26,7 @@
     body {
       color: white;
     }
+
     h3 {
       margin-top: 5%;
     }
@@ -88,31 +91,30 @@
 
 
   <div class="container">
-      <form>
-          <div class="form-row align-items-center">
-              <div class="col-auto my-1">
-                  <label class="mr-sm-2" for="inlineFormCustomSelect">Current Best Prices</label>
-                  <p>Find the diffential of the cryptocurrency of your choice. This compares data from CoinMarketCap.com and
-                      CoinRanking.com
-                  </p>
-                  <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                      <option selected>Choose...</option>
-                      <option id="btc" value="1">BTC</option>
-                      <option id="eth" value="2">ETH</option>
-                      <option id="ltc" value="3">LTC</option>
-                  </select>
-              </div>
-              <div class="col-auto my-1">
-                  <div class="custom-control custom-checkbox mr-sm-2">
-                      <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
-                      <label class="custom-control-label" for="customControlAutosizing">Remember my preference</label>
-                  </div>
-              </div>
-              <div class="col-auto my-1">
-                  <button type="submit" class="btn btn-primary">Submit</button>
-              </div>
+    <form>
+      <div class="form-row align-items-center">
+        <div class="col-auto my-1">
+          <label class="mr-sm-2" for="inlineFormCustomSelect">Current Best Prices</label>
+          <p>Find the diffential of the cryptocurrency of your choice. This compares data from CoinMarketCap.com and CoinRanking.com
+          </p>
+          <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+            <option selected>Choose...</option>
+            <option id="btc" value="1">BTC</option>
+            <option id="eth" value="2">ETH</option>
+            <option id="ltc" value="3">LTC</option>
+          </select>
+        </div>
+        <div class="col-auto my-1">
+          <div class="custom-control custom-checkbox mr-sm-2">
+            <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
+            <label class="custom-control-label" for="customControlAutosizing">Remember my preference</label>
           </div>
-      </form>
+        </div>
+        <div class="col-auto my-1">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </form>
     <table class="table table-striped" id="valuesFrom2APIs">
       <thead>
         <tr>
@@ -156,18 +158,20 @@
           <td id="change30BTC"></td>
         </tr>
         <tr>
-          <td>Litecoin</td>
-          <td id="currentLTC"></td>
-          <td id="change24LTC"></td>
-          <td id="change7LTC"></td>
-          <td id="change30LTC"></td>
-        </tr>
-        <tr>
           <td>Ethereum</td>
           <td id="currentETH"></td>
           <td id="change24ETH"></td>
           <td id="change7ETH"></td>
           <td id="change30ETH"></td>
+
+        </tr>
+        <tr>
+          <td>Litecoin</td>
+          <td id="currentLTC"></td>
+          <td id="change24LTC"></td>
+          <td id="change7LTC"></td>
+          <td id="change30LTC"></td>
+
         </tr>
 
       </tbody>
