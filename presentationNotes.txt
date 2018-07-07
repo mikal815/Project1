@@ -5,7 +5,7 @@ use .ignorefiles so you don't have to push API keys to internet
 in a config file
 
 
-implement smoething in local storage
+implement something in local storage
 
 project should pull api keys out of local storage....config storage
 
