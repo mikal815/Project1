@@ -57,6 +57,15 @@ $.ajax({
 // 2nd api
 
 $.ajax({
+    url:"https://api.coinranking.com/v1/public/coins?sort=price&limit=10",
+    method: "GET"
+  }).then(function(response) {
+    console.log(response);
+  });
+
+  
+
+$.ajax({
     //url: queryURL,
     url: "https://api.coinranking.com/v1/public/coin/1335/history/7d?base=USD",
     method: "GET"
