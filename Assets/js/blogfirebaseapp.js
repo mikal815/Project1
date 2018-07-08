@@ -1,14 +1,8 @@
-console.log('test');
-//blogfirebase.app  //button for adding employees
 $("#blogbutton").on("click", function(event) {
-  console.log("hey");
 event.preventDefault();
 
-//grab user input
 var blogText = $("#blogtext").val().trim();
 
-
-//creates local "temp" object for holding empoee data
 var newBlog = {
     message: blogText,
 
@@ -18,11 +12,11 @@ var errors=[];
 
 if (blogText.length ===0) {
   errors.push("Message is required")
-  console.log("errors", errors)
+ 
 }
-//console.log("errors", errors)
+
 if (errors.length > 0) {
-  console.log("error messageing")
+  
   alert(errors);
  
 $("#errormessage").append("string")
